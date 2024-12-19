@@ -1,0 +1,251 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #210b44;
+}
+
+/* Header */
+header {
+    background: #161135;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center;    /* Center-align the items */
+    text-align: center;     /* Center the text */
+    gap: 15px;              /* Add some space between image and text */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+
+/* Skills Section */
+.skills .skill {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    position: relative;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #007bff;
+    width: 0;
+    border-radius: 5px;
+    animation: progress 2s ease-out forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Skills Hover Effect */
+.skill:hover {
+    transform: rotate(730deg);
+    box-shadow: 5px 10px 15px rgba(0, 123, 255, 0.3);
+    cursor: pointer;
+}
+
+.skill:hover .progress-bar span {
+    background-color: #f39c12; /* Change color on hover for a fun twist */
+}
+
+/* Contact Section */
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Address Section */
+#address {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#address p {
+    font-size: 1.1rem;
+}
+
+/* Advertisement Section */
+.advertisement {
+    background-color: #192569;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.advertisement-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-btn {
+    background-color: #8890ff;
+    color: white;
+    padding: 5px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contact-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-top:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Stylish Registration Header */
+#registration-header {
+    background: linear-gradient(90deg, #26236e, #1b8af2);
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 4px solid #0056b3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Always stays visible at the top */
+    top: 0;
+    z-index: 10;
+}
+
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.registration-text {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.registration-text .icon {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+    animation: bounce 1.5s infinite;
+}
+
+/* Add bounce effect for the icon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
